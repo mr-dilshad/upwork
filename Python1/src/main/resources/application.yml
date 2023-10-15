@@ -1,0 +1,30 @@
+spring:
+  cassandra:
+    contactpoints: 127.0.0.1
+    port: 9042
+    basepackages: com.example.Python1
+  data:
+    cassandra:
+      keyspace-name: mykeyspace
+  kafka:
+    consumer:
+      bootstarp-servers: localhost:9092
+      group-id: "my_group_id"
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstarp-servers: locahost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mr.dilshad753@gmail.com
+    password: wockocuycabasogb
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
